@@ -51,10 +51,9 @@ download(){
 
 async handleShow () {
     let canvas = await html2canvas(document.getElementById("my-node")).then(function(canvas) {
-        console.log(canvas)
+
         return canvas
     });
-    console.log(canvas)
     this.setState({modal:canvas.toDataURL(), show: true});
 }
 
@@ -102,7 +101,7 @@ render() {
                 </Col>  
 
                 <Col md={4} mdOffset={1} id="my-node" className="imageBox" >
-                    
+
                     <h1 className="name">{this.state.name.toUpperCase()}</h1>
                     <h3 className="imageBox">{this.state.title.charAt(0).toUpperCase() + this.state.title.slice(1)}{this.state.company ? ", " + this.state.company.charAt(0).toUpperCase() + this.state.company.slice(1) : ""}</h3>
                     <Image className="image"  src={this.state.image} />
