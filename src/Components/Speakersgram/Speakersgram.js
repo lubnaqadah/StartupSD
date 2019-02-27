@@ -10,8 +10,11 @@ class Speakersgram extends React.Component {
         super(props);
         this.state = {
             name: '',
+            nameFS: 'red',
             title:'',
+            titleFS: '12',
             company:'',
+            companyFS:'12',
             image:null,
             show: false,
             modal: null
@@ -22,6 +25,7 @@ class Speakersgram extends React.Component {
         this.handleShow = this.handleShow.bind(this);
         this.handleClose = this.handleClose.bind(this);
         this.download = this.download.bind(this);
+        this.nameFont = this.nameFont.bind(this);
     }
 
 
@@ -48,6 +52,9 @@ download(){
     window.open(this.state.modal)
 }
 
+nameFont(size){
+     this.setState({ nameFS: size.target.value})
+}
 
 async handleShow () {
     let canvas = await html2canvas(document.getElementById("my-node")).then(function(canvas) {
@@ -60,6 +67,8 @@ async handleShow () {
 
 render() {
 
+
+
     return (
 
         <Grid>
@@ -71,12 +80,12 @@ render() {
 
                 <Col md={4}  >
                     <form>
-
                         <FormGroup controlId="formControlsText">
                             <ControlLabel>Name</ControlLabel>
                             <FormControl type="text" placeholder="Enter text" name= "name" onChange={this.handleChange} />
+                            <FontSize nameFont = {this.nameFont}/>
                         </FormGroup>
-                        <FontSize />
+
                         <FormGroup controlId="formControlsText">
                             <ControlLabel>Title</ControlLabel>
                             <FormControl type="text" placeholder="Enter text" name= "title" onChange={this.handleChange} />
@@ -102,7 +111,7 @@ render() {
 
                 <Col md={4} mdOffset={1} id="my-node" className="imageBox" >
 
-                    <h1 className="name">{this.state.name.toUpperCase()}</h1>
+                    <h1 className="name" style={{color: this.state.nameFS}}>{this.state.name.toUpperCase()}</h1>
                     <h3 className="imageBox">{this.state.title.charAt(0).toUpperCase() + this.state.title.slice(1)}{this.state.company ? ", " + this.state.company.charAt(0).toUpperCase() + this.state.company.slice(1) : ""}</h3>
                     <Image className="image"  src={this.state.image} />
 
