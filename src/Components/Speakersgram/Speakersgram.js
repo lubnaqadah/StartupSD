@@ -3,7 +3,7 @@ import {FormControl, FormGroup, ControlLabel, Button, Col, Row,Grid,Image, Modal
 import "./Speakersgram.css";
 import html2canvas from 'html2canvas';
 import logo from "../../images/PCSDLogo250.png"
-
+import FontSize from "./../FontSize";
 
 class Speakersgram extends React.Component {
     constructor(props) {
@@ -76,7 +76,7 @@ render() {
                             <ControlLabel>Name</ControlLabel>
                             <FormControl type="text" placeholder="Enter text" name= "name" onChange={this.handleChange} />
                         </FormGroup>
-
+                        <FontSize />
                         <FormGroup controlId="formControlsText">
                             <ControlLabel>Title</ControlLabel>
                             <FormControl type="text" placeholder="Enter text" name= "title" onChange={this.handleChange} />
