@@ -118,14 +118,14 @@ render() {
                 </Col>  
 
                 <Col md={4} mdOffset={1} id="my-node" className="imageBox" >
-                    <Image className="logo" src={logo} />
-                    <h1 className="title">{this.state.title.toUpperCase()}</h1>
-                    <h1 className="name" style={{color: this.state.nameFS}}>{this.state.name.toUpperCase()}</h1>
-                    <h3 className="jobTitle">{this.state.jobTitle.charAt(0).toUpperCase() + this.state.jobTitle.slice(1)}{this.state.company ? ", " + this.state.company.charAt(0).toUpperCase() + this.state.company.slice(1) : ""}</h3>
-                    <Image className="image"  src={this.state.image} />
-                    <p className = "description">{this.state.discription}</p>
+                    <div><Image className="logo" src={logo} /></div>
+                    <div className="title"><h1>{this.state.title.toUpperCase()}</h1></div>
+                    <div className="name" style={{color: this.state.nameFS}}><h1>{this.state.name.toUpperCase()}</h1></div>
+                    <div className="jobTitle"><h3>{this.state.jobTitle.charAt(0).toUpperCase() + this.state.jobTitle.slice(1)}{this.state.company ? ", " + this.state.company.charAt(0).toUpperCase() + this.state.company.slice(1) : ""}</h3></div>
+                    <div className="image" ><Image src={this.state.image} /></div>
+                    <div className = "description"><p>{this.state.discription}</p></div>
 
-                    <p className="footer">#STARTUPSD #SDSW2019</p>
+                    <div className="footer"> <p>#STARTUPSD #SDSW2019</p></div>
 
                 </Col>
 
