@@ -8,48 +8,64 @@ body {
     font-weight: 600;
 }
 
-.footer{
-/*    text-align: left;*/
-    padding:0 20px;
-    background-color: #4e5b69;
-/*    padding: 0;*/
-    margin: 0;
-    width: 100%;
-    min-height: 50px;
-    font-size: 1.8em;
-    color: #e3e3e3;
-    line-height: 2em
+.banner_content {
+    display: block;
+    background-color: "white";
+    background-image: url("../../images/Startup-San-Diego-Logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: auto;
+    width: 80%;
+    height: 200px;
+    justify-content:center
 }
 
 .imageBox{
+    width:500px;
+    height: 450px;
     text-align: center;
-/*    padding-bottom: 20px;*/
     padding-right: 0;
     padding-left:0;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     background-color: #e3e3e3;
     min-height: 40vh;
-    color: #c3655d
+    color: #000;
+    background-image: url(../../images/pattern.png);
+    background-repeat:repeat;
+    background-color: rgba(0,0,0,.2);
+    word-wrap: break-word
 }
 
 .logo {
-    width: 50%;
-    text-align: right;
-    align-items: flex-start;
+    display: block;
+    position: absolute;
+    top:1%;
+    width: 40%;
+    margin: 0 auto;
+    margin-left: 30%;
+    clear: both;
 }
-.banner_content {
-    background-color: "white";
-    background-image: url("../../images/banner.png");
-    background-repeat: no-repeat;
-    width: auto;
-    height: 214px;
-    justify-content: center
+
+.title{
+    margin-top: 15%;
+    font-size: 2em;
+    font-weight: 600
+}
+.name{
+    font-size: 1.8em;
+    z-index: 0
+/*    float: right*/
 }
 
 .image{
+    position: absolute;
     max-height: 200px;
-    max-width: 200px
+    max-width: 200px;
+    padding: 5px;
+    top: 25%;
+    left: 1%;
+    z-index: 0
 }
 
 .canvas {
@@ -60,4 +76,14 @@ body {
     margin: 20px auto;
 }
 
-
+.footer{
+    position: absolute;
+    bottom: 0;
+    padding:0 20px;
+    background-color: #4e5b69;
+    width: 100%;
+    min-height: 50px;
+    font-size: 1.8em;
+    color: #e3e3e3;
+    line-height: 2em
+}

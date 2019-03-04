@@ -2,20 +2,22 @@ import React from "react";
 import {FormControl, FormGroup, ControlLabel, Button, Col, Row,Grid,Image, Modal} from 'react-bootstrap';
 import "./Speakersgram.css";
 import html2canvas from 'html2canvas';
-import logo from "../../images/PCSDLogo250.png"
+import logo from "../../images/Startup-San-Diego-Logo.png"
 import FontSize from "./../FontSize";
 
 class Speakersgram extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            title:'',
             name: '',
             nameFS: 'red',
-            title:'',
+            jobTitle:'',
             titleFS: '12',
             company:'',
             companyFS:'12',
             image:null,
+            discription: '',
             show: false,
             modal: null
         };
@@ -53,7 +55,7 @@ download(){
 }
 
 nameFont(size){
-     this.setState({ nameFS: size.target.value})
+    this.setState({ nameFS: size.target.value})
 }
 
 async handleShow () {
@@ -81,14 +83,20 @@ render() {
                 <Col md={4}  >
                     <form>
                         <FormGroup controlId="formControlsText">
+                            <ControlLabel>Title</ControlLabel>
+                            <FormControl type="text" placeholder="Enter text" name= "title" onChange={this.handleChange} />
+
+                        </FormGroup>
+
+                        <FormGroup controlId="formControlsText">
                             <ControlLabel>Name</ControlLabel>
                             <FormControl type="text" placeholder="Enter text" name= "name" onChange={this.handleChange} />
                             <FontSize nameFont = {this.nameFont}/>
                         </FormGroup>
 
                         <FormGroup controlId="formControlsText">
-                            <ControlLabel>Title</ControlLabel>
-                            <FormControl type="text" placeholder="Enter text" name= "title" onChange={this.handleChange} />
+                            <ControlLabel>Job Title</ControlLabel>
+                            <FormControl type="text" placeholder="Enter text" name= "jobTitle" onChange={this.handleChange} />
                         </FormGroup>
 
                         <FormGroup controlId="formControlsText">
@@ -110,13 +118,14 @@ render() {
                 </Col>  
 
                 <Col md={4} mdOffset={1} id="my-node" className="imageBox" >
-
-                    <h1 className="name" style={{color: this.state.nameFS}}>{this.state.name.toUpperCase()}</h1>
-                    <h3 className="imageBox">{this.state.title.charAt(0).toUpperCase() + this.state.title.slice(1)}{this.state.company ? ", " + this.state.company.charAt(0).toUpperCase() + this.state.company.slice(1) : ""}</h3>
-                    <Image className="image"  src={this.state.image} />
-
                     <Image className="logo" src={logo} />
-                    <p className="footer">#PRODUCTCAMPSD</p>
+                    <h1 className="title">{this.state.title.toUpperCase()}</h1>
+                    <h1 className="name" style={{color: this.state.nameFS}}>{this.state.name.toUpperCase()}</h1>
+                    <h3 className="jobTitle">{this.state.jobTitle.charAt(0).toUpperCase() + this.state.jobTitle.slice(1)}{this.state.company ? ", " + this.state.company.charAt(0).toUpperCase() + this.state.company.slice(1) : ""}</h3>
+                    <Image className="image"  src={this.state.image} />
+                    <p className = "description">{this.state.discription}</p>
+
+                    <p className="footer">#STARTUPSD #SDSW2019</p>
 
                 </Col>
 
