@@ -30,7 +30,7 @@ class Speakersgram extends React.Component {
         this.nameFont = this.nameFont.bind(this);
     }
 
-
+//function to handle any change in the form input
     handleChange = event => {
         const value = event.target.value;
         const name = event.target.name;
@@ -40,24 +40,29 @@ class Speakersgram extends React.Component {
 
     };
 
+// to take care of the image uploade
 fileChangedHandler = (event) => {
     this.setState({
         image: URL.createObjectURL(event.target.files[0])
     })
 }
 
+// to close the card preview( to close the modal)
 handleClose() {
     this.setState({ show: false });
 }
 
+//to download the card
 download(){
     window.open(this.state.modal)
 }
 
+// to change the font size
 nameFont(size){
     this.setState({ nameFS: size.target.value})
 }
 
+// to preview the card 
 async handleShow () {
     let canvas = await html2canvas(document.getElementById("my-node")).then(function(canvas) {
 
@@ -68,8 +73,6 @@ async handleShow () {
 
 
 render() {
-
-
 
     return (
 
@@ -118,7 +121,8 @@ render() {
                 </Col>  
 
                 <Col md={4} mdOffset={1} id="my-node" className="imageBox" >
-                    <div><Image className="logo" src={logo} /></div>
+                   
+                    <div className="logo" ><Image src={logo} /></div>
                     <div className="title"><h1>{this.state.title.toUpperCase()}</h1></div>
                     <div className="name" style={{color: this.state.nameFS}}><h1>{this.state.name.toUpperCase()}</h1></div>
                     <div className="jobTitle"><h3>{this.state.jobTitle.charAt(0).toUpperCase() + this.state.jobTitle.slice(1)}{this.state.company ? ", " + this.state.company.charAt(0).toUpperCase() + this.state.company.slice(1) : ""}</h3></div>
