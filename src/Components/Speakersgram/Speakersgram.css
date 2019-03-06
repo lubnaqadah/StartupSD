@@ -50,21 +50,22 @@ body {
 .title{
     font-size: 1.8em;
     font-weight: 600;
-    min-height: 60px;
+    min-height: 40px;
     margin: 0;
 }
 h1{
     margin: 5px 0;
-
+    font-size: 1.4em;
 }
 .name{
-    font-size: 1.5em;
+    font-size: 1.4em;
     font-weight: 600;
     min-height: 40px;
     margin: 0;
     float: right;
     text-align: left;
-    width: 60%
+    width: 60%;
+    padding: 5px
 }
 .image{
     float: left;
@@ -77,7 +78,39 @@ h1{
     padding: 5px;
     margin: 0
 }
-
+h3{
+    margin: 0;
+    font-size: 1.4em
+}
+.jobTitle{
+    float: right;
+    text-align: left;
+    width: 60%;
+    padding: 5px;    
+}
+.description{
+    float: right;
+    text-align: left;
+    width: 60%;
+    padding: 5px   ;
+    font-size: 1.2em
+}
+p{
+    margin: 0;
+}
+.when{
+    width: 100%;
+    padding: 5p;
+    clear: both;
+    font-size: 2em;
+    color: #1191ba;
+}
+.where{
+    width: 100%;
+    padding: 5p;
+    clear: both;
+    font-size: 2em;
+}
 .canvas {
     max-width: 400px
 }

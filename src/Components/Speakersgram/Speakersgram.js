@@ -11,13 +11,15 @@ class Speakersgram extends React.Component {
         this.state = {
             title:'',
             name: '',
-            nameFS: 'red',
+            nameFS: '#4e5b69',
             jobTitle:'',
             titleFS: '12',
             company:'',
             companyFS:'12',
             image:null,
             discription: '',
+            when:'',
+            where:'',
             show: false,
             modal: null
         };
@@ -112,6 +114,16 @@ render() {
                             <FormControl componentClass="textarea" type="text" placeholder="Enter text" name= "discription" onChange={this.handleChange}/>
                         </FormGroup>
 
+                        <FormGroup controlId="formControlsText">
+                            <ControlLabel>When</ControlLabel>
+                            <FormControl  type="date" placeholder="Enter text" name= "when" onChange={this.handleChange}/>
+                        </FormGroup>
+
+                        <FormGroup controlId="formControlsText">
+                            <ControlLabel>Where</ControlLabel>
+                            <FormControl componentClass="textarea" type="text" placeholder="Enter text" name= "where" onChange={this.handleChange}/>
+                        </FormGroup>
+
                         <FormGroup controlId="">
                             <ControlLabel>Image</ControlLabel>
                             <FormControl type="file" name= "image" onChange={this.fileChangedHandler} />
@@ -128,6 +140,8 @@ render() {
                     <div className="image" ><Image src={this.state.image} /></div>
                     <div className="jobTitle"><h3>{this.state.jobTitle.charAt(0).toUpperCase() + this.state.jobTitle.slice(1)}{this.state.company ? ", " + this.state.company.charAt(0).toUpperCase() + this.state.company.slice(1) : ""}</h3></div>                  
                     <div className = "description"><p>{this.state.discription}</p></div>
+                    <div className = "when"><p>{this.state.when}</p></div>
+                    <div className = "where"><p>{this.state.where}</p></div>
 
                     <div className="footer"> <p>#STARTUPSD #SDSW2019</p></div>
 
