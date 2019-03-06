@@ -30,7 +30,7 @@ class Speakersgram extends React.Component {
         this.nameFont = this.nameFont.bind(this);
     }
 
-//function to handle any change in the form input
+    //function to handle any change in the form input
     handleChange = event => {
         const value = event.target.value;
         const name = event.target.name;
@@ -121,12 +121,12 @@ render() {
                 </Col>  
 
                 <Col md={4} mdOffset={1} id="my-node" className="imageBox" >
-                   
+
                     <div className="logo" ><Image src={logo} /></div>
                     <div className="title"><h1>{this.state.title.toUpperCase()}</h1></div>
                     <div className="name" style={{color: this.state.nameFS}}><h1>{this.state.name.toUpperCase()}</h1></div>
-                    <div className="jobTitle"><h3>{this.state.jobTitle.charAt(0).toUpperCase() + this.state.jobTitle.slice(1)}{this.state.company ? ", " + this.state.company.charAt(0).toUpperCase() + this.state.company.slice(1) : ""}</h3></div>
                     <div className="image" ><Image src={this.state.image} /></div>
+                    <div className="jobTitle"><h3>{this.state.jobTitle.charAt(0).toUpperCase() + this.state.jobTitle.slice(1)}{this.state.company ? ", " + this.state.company.charAt(0).toUpperCase() + this.state.company.slice(1) : ""}</h3></div>                  
                     <div className = "description"><p>{this.state.discription}</p></div>
 
                     <div className="footer"> <p>#STARTUPSD #SDSW2019</p></div>

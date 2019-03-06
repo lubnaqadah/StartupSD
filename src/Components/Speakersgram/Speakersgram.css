@@ -48,25 +48,34 @@ body {
 }
 
 .title{
-/*    margin-top: 15%;*/
-    font-size: 2em;
-    font-weight: 600
+    font-size: 1.8em;
+    font-weight: 600;
+    min-height: 60px;
+    margin: 0;
+}
+h1{
+    margin: 5px 0;
+
 }
 .name{
-    font-size: 1.8em;
-    z-index: 0
-/*    float: right*/
+    font-size: 1.5em;
+    font-weight: 600;
+    min-height: 40px;
+    margin: 0;
+    float: right;
+    text-align: left;
+    width: 60%
+}
+.image{
+    float: left;
+    margin: 0
 }
 
-.image{
-/*    position: absolute;*/
+.image img{
     max-height: 200px;
     max-width: 200px;
     padding: 5px;
-/*
-    top: 25%;
-    left: 1%;
-*/
+    margin: 0
 }
 
 .canvas {
