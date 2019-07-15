@@ -1,7 +1,7 @@
 ### Speaker Gram 
 
-###### A tool Ibuilt to help the marketing and social media team at StartupSD to generate speaker cards ready to share with on all platforms. 
+###### A tool Ibuilt to help the marketing team at StartupSD to generate speaker cards ready to share on social media. 
 
-Example :
+# Example :
 
 ![alt text](./src/images/lubna_alqadah.png)
